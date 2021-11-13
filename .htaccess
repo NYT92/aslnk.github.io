@@ -3,6 +3,6 @@ Redirect 301 /404 http://www.aslnk.ml/404.html
 Redirect 301 /index http://www.aslnk.ml/404.html
 
 
-<FilesMatch "./assets/js/action.js">
+<FilesMatch ".\assets\js\action.js">
     Deny from all
 </FilesMatch>
