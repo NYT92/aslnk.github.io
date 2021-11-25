@@ -9,7 +9,7 @@ document.getElementById("myinput").onclick = function() {
     headers: {
       'accept': 'application/json',
       'Content-Type': 'application/json',
-      'authorization': 'pk_vDYFhUEvavPMEEDR'
+      'authorization': 'pk_vDYFhUEvavPMEEDR' //u cant use it lol // cuz it only allow on aslnk.ml domain
     },
     body: JSON.stringify(data)
   }) .then(function(response) {
