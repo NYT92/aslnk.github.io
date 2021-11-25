@@ -1,7 +1,7 @@
 document.getElementById("myinput").onclick = function() {
   var link = document.getElementById("linkinput").value;
   var data = {
-    "domain":"YOUR_DOMAIN",
+    "domain":"aslnk.ml",
     "originalURL": link,
     "allowDuplicates":false }; 
  fetch('https://api.short.cm/links/public', {
