@@ -1,1 +1,29 @@
-var link=document.getElementById("linkinput").value;function appendData(t){var e=document.getElementById("contentresult"),n=document.createElement("div");n.innerHTML='<div class="alert alert-success" role="alert"><span><strong>Links : </strong></span><span id="text">'+t.shortURL+'</span></br><button id="copybtn" class="btn btn-primary" type="button" style="background: transparent;color: rgb(0,0,0);border-width: 1px;border-color: rgb(0,0,0);border-radius: 0px;margin-top: 6px;" onclick="copyTxt()">Copy to Clipboard <i class="fa fa-clipboard"></i></button></div>',e.appendChild(n)}function copyTxt(){var t=document.getElementById("text"),e=document.createElement("textarea");e.value=t.textContent,document.body.appendChild(e),e.select(),document.execCommand("Copy"),e.remove()}document.getElementById("myinput").onclick=function(){fetch(`https://api.aslnk.ml/api/create?link=${link}`).then(t=>t.json()).then(function(t){appendData(t)}),document.getElementById("linkinput").value=""},document.getElementById("copybtn").addEventListener("click",copyTxt);
+var link = document.getElementById("linkinput").value;
+document.getElementById("myinput").onclick = function () {
+  fetch(`https://api.aslnk.ml/api/create?link=${link}`)
+    .then((res) => res.json())
+    .then(function (data) {
+      appendData(data);
+    });
+  document.getElementById("linkinput").value = "";
+};
+
+function appendData(data) {
+  var mainContainer = document.getElementById("contentresult");
+  var div = document.createElement("div");
+  div.innerHTML =
+    '<div class="alert alert-success" role="alert"><span><strong>Links : </strong></span><span id="text">' + data.shortURL + '</span></br><button id="copybtn" class="btn btn-primary" type="button" style="background: transparent;color: rgb(0,0,0);border-width: 1px;border-color: rgb(0,0,0);border-radius: 0px;margin-top: 6px;" onclick="copyTxt()">Copy to Clipboard <i class="fa fa-clipboard"></i></button></div>';
+  mainContainer.appendChild(div);
+}
+
+document.getElementById("copybtn").addEventListener("click", copyTxt);
+
+function copyTxt() {
+  var copyText = document.getElementById("text");
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
+}
