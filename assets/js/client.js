@@ -1,5 +1,5 @@
-var link = document.getElementById("linkinput").value;
 document.getElementById("myinput").onclick = function () {
+  var link = document.getElementById("linkinput").value;
   fetch(`https://api.aslnk.ml/api/create?link=${link}`)
     .then((res) => res.json())
     .then(function (data) {
