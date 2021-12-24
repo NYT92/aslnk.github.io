@@ -1,6 +1,6 @@
 document.getElementById("myinput").onclick = function () {
 var link = document.getElementById("linkinput").value;
-var url = 'https://api.short.io/links';
+var url = 'https://api.aslnk.ml/api/create';
 var options = {
   method: 'POST',
   headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
