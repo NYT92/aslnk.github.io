@@ -1,0 +1,6 @@
+@media (min-width:992px) {
+  .justify-content-lg-end {
+    justify-content: flex-end!important;
+  }
+}
+
