@@ -1,5 +1,8 @@
 # API Documentation
 
+:warning: DONT ABUSE HANIME SYSTEMs </br>
+:heavy_check_mark: USE IT FRO TESTING PURPOSES ONLY
+
 **Available routes**
 	- Login
 	
@@ -236,8 +239,13 @@ To get Download Hanime Video page
 
 <br />
 
+# Source Code ???
+
+Not yet because im scared of getting email from hanime and people might be abusing it too....
+I need to organise everything first....
+
 # Troubleshootings
 If there is any problem with this API, Please email me at admin@aslnk.ml
 
 # Author / Credits
-Made By NYT92
+Made with :love: By NYT92 from :cambodia:
