@@ -5,8 +5,8 @@
 
 # Table of Contents
 
-[Login](#login) </br>
-[API](#api)
+- [Auth](#authentication)
+- [API](#api)
 
 **Available routes**
 	- Login
