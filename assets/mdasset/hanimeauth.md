@@ -1,13 +1,23 @@
 # API Documentation
 
 **Available routes**
+	- Login
 	
 	/login?email=&password=
-	
 	/login/summary?email=&password=
-	
 	/login/coins?email=&password=
 	
+**New Routes**
+	- API
+	
+	/getDownloadURL
+	/getInfo
+	/getVideo
+	/getLanding (unorganize)
+	/getComment (soon)
+
+## Authentication
+
 **/login**
 
 To login do this
@@ -131,6 +141,94 @@ To get a coins from Hanime without installing App
 
 Soon
 
+````
+#API
+
+**/getVideo**
+
+To get video from the hanime website
+>/getVideo?id=(HANIME SLUG or VIDEO ID)
+
+````
+{
+  "360": {
+    URL Stream
+  },
+  "480": {
+    URL Stream
+  },
+  "720": {
+    URL Stream
+  },
+  "1080": {
+    URL Stream
+  },
+  "downloadURL": "https://hanime.tv/downloads/<>",
+  "url": "https://hanime.tv//videos/hentai/(HANIME SLUG VIDEO)"
+}
+````
+
+**/getInfo**
+
+To get Information about Hanime Video
+>/getInfo?id=(HANIME SLUG or VIDEO ID)
+
+````
+{
+  "description": "",
+  "downloadURL": "https://hanime.tv/downloads/<>",
+  "info": {
+    "alternatetitles": [
+      
+    ],
+    "brand": "",
+    "branduploads": "",
+    "censored": true,
+    "releasedate": "",
+    "uploaddate": "",
+    "views": "X views"
+  },
+  "tags": [
+    "swimsuit",
+    "harem",
+    "incest",
+    "creampie",
+    "hd",
+    "plot",
+    "school girl",
+    "big boobs",
+    "censored",
+    "blow job"
+  ],
+  "thumbnails": "https://git-covers.pages.dev/images/XX.png",
+  "video": "https://hanime.tv/videos/hentai/XX"
+}
+````
+
+**/getLanding**
+
+To get the latest update from Hanime
+
+> /getLanding
+
+Try for yourself
+https://hani.nsdev.ml/getLanding
+
+:warning: They are all unorganize because it was fetch from /api/v8/landing
+
+**/getComment**
+
+````
+Soon
+````
+
+**/getDownloadURL**
+
+To get Download Hanime Video page
+>/getDownloadURL?id=(HANIME SLUG or VIDEO ID)
+
+````
+"downloadURL": "https://hanime.tv/downloads/<>"
 ````
 
 <br />
