@@ -142,7 +142,8 @@ To get a coins from Hanime without installing App
 Soon
 
 ````
-#API
+
+## API
 
 **/getVideo**
 
@@ -167,6 +168,8 @@ To get video from the hanime website
   "url": "https://hanime.tv//videos/hentai/(HANIME SLUG VIDEO)"
 }
 ````
+
+:warning: Downloading 1080p is not possible yet, We might find the way to do it..
 
 **/getInfo**
 
